@@ -41,6 +41,7 @@ pipeline {
 
         stage('Plt Code Coverage Report') {
             steps {
+                echo 'hello'
 
             }
         }
