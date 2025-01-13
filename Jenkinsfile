@@ -12,11 +12,11 @@ pipeline {
         
         stage('Install PHP curl extension') {
             steps {
-                sh 'sudo apt-get update'
-                sh 'sudo apt-get install -y php-curl'
+                sh 'apt-get update'
+                sh 'apt-get install -y php-curl'
             }
         }
-        
+
         stage('Checkout SCM') {
             steps {
                 git branch: 'main', url: 'https://github.com/Simontagbor/php-todo.git'
