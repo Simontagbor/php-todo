@@ -25,9 +25,9 @@ pipeline {
 
         stage('prepare dependencies') {
             steps {
-                sh 'mv .env.sample .env'
-                sh 'composer update'	
+                sh 'mv .env.sample .env'	
                 sh 'composer install'
+                sh 'composer update'
                 sh 'php artisan migrate'
                 sh 'php artisan db:seed'
                 sh 'php atisan key:generate'
