@@ -10,12 +10,12 @@ pipeline {
             }
         }
         
-        stage('Install PHP curl extension') {
-            steps {
-                sh 'apt-get update'
-                sh 'apt-get install -y php-curl'
-            }
-        }
+        // stage('Install PHP curl extension') {
+        //     steps {
+        //         sh 'apt-get update'
+        //         sh 'apt-get install -y php-curl'
+        //     }
+        // }
 
         stage('Checkout SCM') {
             steps {
